@@ -15,7 +15,8 @@ def hello(name: Optional[str] = typer.Argument(None)):
 def goodbye(name: Optional[str] = typer.Argument(None)):
     if not(name is None):
         typer.echo(f"Goodbye {name}")
-   
+
+        
 @app.command()
 def q():
     typer.Abort()

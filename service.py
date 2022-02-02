@@ -17,7 +17,7 @@ def interface():
                 print(f"--{cmd}")
             command = str(input("> ")) 
        else:
-            p = subprocess.run(f'python subprocess.py {command}', shell=True)
+            p = subprocess.run(f'python customSubprocess.py {command}', shell=True)
             break
          
                     
