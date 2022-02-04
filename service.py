@@ -4,6 +4,9 @@ import sys
 import subprocess
 import keyboard
 import FilesHelper
+import os
+def initializePrequisites():
+    FilesHelper.saveCurrentPath(os.getcwd())
 
 def interface():
     commandsList = FilesHelper.loadCommandsList("commandsList.txt")
@@ -24,7 +27,7 @@ def interface():
     return command
 
 if __name__=="__main__":
-     
+     initializePrequisites()
      print("To exit press q! Have Fun!!")
      while  interface() != "q":
            continue
